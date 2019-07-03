@@ -1,0 +1,17 @@
+Sourcetree error RPC failed curl 56 LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+fatal: the remote end hung up unexpectedly
+fatal: ealry EOF
+fatal: index-pack failed
+
+
+Fix:
+- Open '.gitconfig' file in home folder. In case of MAC it will be in root path of your user like 'Mac HD/Users/(User name)' and in windows
+find it in 'C' drive. 
+- Add this text to it and save, restart sourcetree.
+[init] templatedir = /Applications/SourceTree.app/Contents/Resources/git_local/share/git-core/templates
+postBuffer = 524288000
+
+
+Let me know in case of issues.
+
+Thanks
