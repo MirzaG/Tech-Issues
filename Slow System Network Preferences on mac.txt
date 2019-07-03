@@ -1,0 +1,22 @@
+Slow System Network Preferences on Mac
+
+Problem:
+When you open System Preferences and then click on Network, network dialog opens up but takes way long to load networks or simply never loads. 
+
+Solution:
+It is majorly due to unnecessary networks(mainly VPN connections) added in you network list. So we need to remove some of them to run it 
+smoothly.
+
+Fix:
+- Open the finder, press 'Cmd + shift + G' and paste this: /Library/Preferences/SystemConfiguration/preferences.plist copy the
+  preferences.plist file somewhere just for backup. right click and open with text-editor.
+- Find the 'NetworkServices' key like <key>NetworkServices</key>, it contains <key> & <dict> tags. delete everyting enclosed between <key> & </key> and <dict> to </dict>.
+  Also remove these tags itself. By rule of thumb you should start from bottom.
+- Due to permission issues you will need to 'Save As' file somewhere on desktop and then copy paste to original location.
+
+Now first close Settings by right clicking on Settings icon, and hit 'Quit'. Now it should work fine.
+
+
+Let me in case you find any issue with it.
+
+Enjoy.
