@@ -17,6 +17,6 @@ Fix:
 Now first close Settings by right clicking on Settings icon, and hit 'Quit'. Now it should work fine.
 
 
-Let me in case you find any issue with it.
+Let me know in case you find any issue with it.
 
 Enjoy.
