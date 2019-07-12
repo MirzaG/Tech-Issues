@@ -1,0 +1,15 @@
+- Generic solution to force tab key to work by ignoring tabindexes using jQuery
+- Only jQuery required, no extra library required
+
+$('body').on('keydown', '.container_div :input:visible', function(e) {              
+  if(e.keyCode == 9){ //Tab key pressed
+      let c_index = $(this).index('.container_div :input:visible'); //get index of this element among visible input form elements in this dialog
+      if(e.shiftKey){
+          $('.container_div :input:visible').eq(c_index-1).focus();
+      }
+      else{
+          $('.container_div :input:visible').eq(c_index+1).focus(); //move cursor to next focusable visible input form elements in this dialog
+      }        
+      e.preventDefault();
+  }
+});
